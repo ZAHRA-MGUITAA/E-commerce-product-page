@@ -13,20 +13,78 @@
       rel="stylesheet"
     />
     <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
+    <div class="product-overlay">
+      <div class="container">
+        <div class="main-overlay">
+          <i class="fa-solid fa-xmark"></i>
+        <div class="main-image">
+          <i
+          class="fa-sharp fa-solid fa-angle-left"
+          id="prev"
+          onclick="prev()"
+        ></i>
+        <img
+          src="images/image-product-1.jpg"
+          alt=""
+          class="main-product"
+          id="slider"
+        />
+        <i
+          class="fa-sharp fa-solid fa-angle-right"
+          id="next"
+          onclick="next()"
+        ></i>
+        </div>
+        <div class="images-slider">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt=""
+            id="img1"
+          />
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt=""
+            id="img2"
+          />
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt=""
+            id="img3"
+          />
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt=""
+            id="img4"
+          />
+        </div>
+        </div>
+
+      </div>
+    </div>
     <div class="container">
       <header>
         <div class="menu">
           <img src="images/logo.svg" alt="" class="logo" />
           <nav>
-            <a href="javascript:void(0);" onclick="Menu()"><i class="fa-solid fa-bars" ></i></a>
+            <a href="javascript:void(0);" onclick="Menu()"
+              ><i class="fa-solid fa-bars"></i
+            ></a>
             <ul id="menu">
-              <a href="javascript:void(0);" onclick="Menu()"><i class="fa-solid fa-xmark"></i></a>
+              <a href="javascript:void(0);" onclick="Menu()"
+                ><i class="fa-solid fa-xmark"></i
+              ></a>
 
               <li>Collections</li>
               <li>Men</li>
@@ -39,6 +97,24 @@
 
         <div class="user">
           <img class="cart" src="images/icon-cart.svg" alt="" />
+          <div class="cart-shop">
+            <h2 class="cart-title">Cart</h2>
+            <hr />
+            <div class="content">
+              
+              <img
+                class="cart-product-image"
+                src="images/image-product-1-thumbnail.jpg"
+                alt=""
+              />
+
+              <div class="text">
+                <p>Fall Limited Edition Sneakers</p>
+                <p>$125.00x3 <span>$375.00</span></p>
+              </div>
+            </div>
+            <button>Checkout</button>
+          </div>
           <img class="avatar" src="images/image-avatar.png" alt="" />
         </div>
       </header>
@@ -46,16 +122,43 @@
       <main>
         <div class="product-details">
           <div class="product-images">
+            <i
+          class="fa-sharp fa-solid fa-angle-left"
+          id="prev"
+          onclick="prev()"
+        ></i>
             <img
               src="images/image-product-1.jpg"
               alt=""
               class="main-product-image"
+              id="main-image"
             />
+            <i
+          class="fa-sharp fa-solid fa-angle-right"
+          id="next"
+          onclick="next()"
+        ></i>
             <div class="images-slider">
-              <img src="images/image-product-1-thumbnail.jpg" alt="" />
-              <img src="images/image-product-2-thumbnail.jpg" alt="" />
-              <img src="images/image-product-3-thumbnail.jpg" alt="" />
-              <img src="images/image-product-4-thumbnail.jpg" alt="" />
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                alt=""
+                id="img1"
+              />
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                alt=""
+                id="img2"
+              />
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                alt=""
+                id="img3"
+              />
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                alt=""
+                id="img4"
+              />
             </div>
           </div>
           <div class="product-infos">
@@ -74,38 +177,158 @@
             <div class="add-to-cart">
               <div class="quantity">
                 <span><i class="fa-solid fa-minus"></i></span>
-                <input type="text" value="0">
+                <input type="text" value="0" />
                 <span><i class="fa-solid fa-plus"></i></span>
               </div>
               <button>
-                <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/></svg>                
-                Add to cart</button>
+                <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                    fill="#69707D"
+                    fill-rule="nonzero"
+                  />
+                </svg>
+                Add to cart
+              </button>
             </div>
           </div>
-          
         </div>
       </main>
     </div>
     <script>
-      function Menu(){
-        iconmenu = document.getElementById('menu');
+      function Menu() {
+        iconmenu = document.getElementById("menu");
         console.log(iconmenu.style.display);
-        if(iconmenu.style.display=="none"){
-          iconmenu.style.display="block"
-        }else{
-          iconmenu.style.display="none"
+        if (iconmenu.style.display == "none") {
+          iconmenu.style.display = "block";
+        } else {
+          iconmenu.style.display = "none";
         }
       }
+      // function img1() {
+      //   var img = document.getElementById("img1");
+      //   var img2 = document.getElementById("img2");
+      //   var img4 = document.getElementById("img4");
+      //   var img3 = document.getElementById("img3");
+      //   var main = document.getElementById("main-image");
+      //   main.src = img.getAttribute("src");
+      //   console.log(img.getAttribute("src"));
+      //   img.style.opacity = "0.5";
+      //   img3.style.opacity = "1";
+      //   img2.style.opacity = "1";
+      //   img4.style.opacity = "1";
+      // }
+      // function img2() {
+      //   var img = document.getElementById("img2");
+      //   var img1 = document.getElementById("img1");
+      //   var img4 = document.getElementById("img4");
+      //   var img3 = document.getElementById("img3");
+      //   console.log(img);
+      //   img.style.opacity = "0.5";
+      //   img1.style.opacity = "1";
+      //   img3.style.opacity = "1";
+      //   img4.style.opacity = "1";
+      //   var main = document.getElementById("main-image");
+      //   main.src = img.getAttribute("src");
+      // }
+      // function img3() {
+      //   var img = document.getElementById("img3");
+      //   var img2 = document.getElementById("img2");
+      //   var img4 = document.getElementById("img4");
+      //   var img1 = document.getElementById("img1");
+
+      //   console.log(img);
+      //   img.style.opacity = "0.5";
+      //   img1.style.opacity = "1";
+      //   img2.style.opacity = "1";
+      //   img4.style.opacity = "1";
+      //   var main = document.getElementById("main-image");
+      //   main.src = img.getAttribute("src");
+      // }
+
+      // function img4() {
+      //   var img = document.getElementById("img4");
+      //   var img2 = document.getElementById("img2");
+      //   var img3 = document.getElementById("img3");
+      //   var img1 = document.getElementById("img1");
+      //   console.log(img);
+      //   img.style.opacity = "0.5";
+      //   img1.style.opacity = "1";
+      //   img2.style.opacity = "1";
+      //   img3.style.opacity = "1";
+      //   var main = document.getElementById("main-image");
+      //   main.src = img.getAttribute("src");
+      // }
+      document.querySelectorAll('.product-details .images-slider img').forEach(image => {
+          image.addEventListener('click',()=>{
+            document.getElementById("main-image").src = image.getAttribute("src").replace('-thumbnail','');
+            
+            document.querySelectorAll('.product-details .images-slider img').forEach(image_slide => {
+                  if(image_slide !== image){
+                    image_slide.style.opacity = "1";
+                    image.style.borderColor = "transparent"
+                  }else{
+                    image.style.opacity="0.5";
+                    image.style.border="1px solid hsl(26, 100%, 55%)"
+                  }
+            });
+          });
+      });
+
+      document.querySelectorAll('.product-overlay .images-slider img').forEach(image => {
+          image.addEventListener('click',()=>{
+            document.querySelector(".product-overlay .main-product").src = image.getAttribute("src").replace('-thumbnail','');
+            
+            document.querySelectorAll('.product-overlay .images-slider img').forEach(image_slide => {
+                  if(image_slide !== image){
+                    image_slide.style.opacity = "1";
+                    image.style.borderColor = "transparent"
+                  }else{
+                    image.style.opacity="0.4";
+                    image.style.border="1px solid hsl(26, 100%, 55%)"
+                  }
+            });
+          });
+      });
 
 
 
+      var i = 0;
+      var images = [
+        "images/image-product-1.jpg",
+        "images/image-product-2.jpg",
+        "images/image-product-3.jpg",
+        "images/image-product-4.jpg",
+      ];
+      function prev() {
+        var image = document.getElementById("slider");
 
+        i--;
 
+        if (i < 0) {
+          i = images.length - 1;
+        }
+        image.src = images[i];
+      }
 
+      function next(){
+        var image = document.getElementById("slider");
 
-
+        i++;
+        if(i>=images.length){
+          i=0
+        }
+        image.src = images[i]
+      }
+     
+        var btnClose = document.querySelector('.main-overlay .fa-xmark');
+        btnClose.addEventListener('click',()=>{
+          document.querySelector('.product-overlay').style.visibility="hidden";
+        });
+        document.querySelector('#main-image').addEventListener('click',()=>{
+          document.querySelector('.product-overlay').style.visibility="visible";
+        });
       
-
     </script>
   </body>
 </html>
