@@ -59,6 +59,7 @@ var images = [
 ];
 function prev() {
   var image = document.getElementById("slider");
+  let imagemain = document.getElementById("main-image");
 
   i--;
 
@@ -66,16 +67,18 @@ function prev() {
     i = images.length - 1;
   }
   image.src = images[i];
+  imagemain.src = images[i];
 }
 
 function next() {
   var image = document.getElementById("slider");
-
+  let imagemain = document.getElementById("main-image");
   i++;
   if (i >= images.length) {
     i = 0;
   }
   image.src = images[i];
+  imagemain.src = images[i];
 }
 
 var btnClose = document.querySelector(".main-overlay .fa-xmark");

@@ -327,6 +327,12 @@ img.main-product {
   top: 15px;
 }
 
+a,
+button,
+i {
+  outline: none;
+}
+
 @media (max-width: 600px) {
   .container {
     margin: 0;
@@ -419,6 +425,7 @@ img.main-product {
   .product-images {
     display: flex;
     align-items: center;
+    z-index: 1;
   }
   .product-details .product-images i {
     visibility: visible;
@@ -437,5 +444,14 @@ img.main-product {
   }
   main {
     margin: 30px 0px;
+  }
+  .product-overlay .main-image i#next {
+    right: 40px;
+  }
+  .product-overlay .main-image i#prev {
+    right: -40px;
+  }
+  .main-overlay i.fa-solid.fa-xmark {
+    right: 20px;
   }
 }
